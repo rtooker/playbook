@@ -1,0 +1,21 @@
+---
+
+- hosts: drupal_hosts
+
+  sudo: yes
+
+  vars:
+    - db_name: drupal
+    - name: "db_user"
+      prompt: "Drupal User"
+      default: "drupal_user"
+    - name: "db_password"
+      prompt: "Drupal Database Password"
+      private: yes
+
+  roles:
+    - update
+    - php
+    - mysql
+    - drupal
+
