@@ -6,6 +6,8 @@
 
   vars:
     - db_name: drupal
+
+  vars_prompt:
     - name: "db_user"
       prompt: "Drupal User"
       default: "drupal_user"
@@ -14,8 +16,8 @@
       private: yes
 
   roles:
-    - update
-    - php
-    - mysql
+#    - update
+#    - php
+#    - mysql
     - drupal
 
